@@ -1,0 +1,108 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Slot
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings:
+    - serializedVersion: 3
+      m_BuildTarget: Android
+      m_MaxTextureSize: 2048
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: 50
+      m_TextureCompression: 1
+      m_CompressionQuality: 50
+      m_CrunchedCompression: 0
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 0
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 0
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 0
+      enableTightPacking: 0
+      enableAlphaDilation: 0
+    secondaryTextureSettings: {}
+    variantMultiplier: 1
+    packables:
+    - {fileID: 102900000, guid: ff32a58a6aa5eea419430129762ee3ef, type: 3}
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: 8345cd30416c0ac44b5615ec062f6a07, type: 3}
+  - {fileID: 21300000, guid: 9da31e02fe04d4a4e90054eea83de92f, type: 3}
+  - {fileID: 21300000, guid: a53ad9526077b504fa00f4775501cb3f, type: 3}
+  - {fileID: 21300000, guid: 3058cb62a305ef74c8b76fc270a41baf, type: 3}
+  - {fileID: 21300000, guid: 29a3e272397158849adc3ce0d6580b28, type: 3}
+  - {fileID: 21300000, guid: 73d75bc26a6fb88438955cf6620d51a2, type: 3}
+  - {fileID: 21300000, guid: 3f18ade2ca501654f8b5118c1926b886, type: 3}
+  - {fileID: 21300000, guid: 6c328a239a56da64ba14345aa3655ddc, type: 3}
+  - {fileID: 21300000, guid: 560070a3836ee874285ef9b90cf10ca9, type: 3}
+  - {fileID: 21300000, guid: cf78b2c338088ce4d82a41c9670f441b, type: 3}
+  - {fileID: 21300000, guid: 0431a144ad39afb4f9296ae95bf7d777, type: 3}
+  - {fileID: 21300000, guid: cfd63315641f2484898dcc28151a0b06, type: 3}
+  - {fileID: 21300000, guid: 6790975559f210449bf32dbb69106520, type: 3}
+  - {fileID: 21300000, guid: 2ea5077578a2e9b4783dbbeee2f6af2c, type: 3}
+  - {fileID: 21300000, guid: 4be6b436ec9881f46b5d1c57e5e5b452, type: 3}
+  - {fileID: 21300000, guid: edb3026674a289248834f742da86a411, type: 3}
+  - {fileID: 21300000, guid: 3fcc27e6ed3fe6042ac3fe9c98088a09, type: 3}
+  - {fileID: 21300000, guid: 0e025c47858b34a4b96a69803b5300db, type: 3}
+  - {fileID: 21300000, guid: c83640e87e7c14549961e834e9322ea6, type: 3}
+  - {fileID: 21300000, guid: 35639459747a19044b1d662f0f069bcf, type: 3}
+  - {fileID: 21300000, guid: 7ce30de95de2d5e46a298a0ecf8ae6b7, type: 3}
+  - {fileID: 21300000, guid: dbc8170ac30614f4c9567549b298c162, type: 3}
+  - {fileID: 21300000, guid: e418f37aa3f5cad438d4bfbdb9f37e1d, type: 3}
+  - {fileID: 21300000, guid: f4c377aa40569414ca92ae88f905a124, type: 3}
+  - {fileID: 21300000, guid: 3bf3df0ed0952e949a55cf6c74c74217, type: 3}
+  - {fileID: 21300000, guid: 6b5e21ce2a46e45479f7cdb90d31f979, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - card_Move
+  - coin_Move
+  - clover_Idle
+  - missile_Move
+  - clover_Move
+  - boom_Idle
+  - pumpkin_Idle
+  - heart_Idle
+  - missile_Idle
+  - potion_Move
+  - nail_Idle
+  - nail_Move
+  - coin_Idle
+  - heart_Move
+  - potion_Idle
+  - sword_Idle
+  - shield_Move
+  - card_Idle
+  - pumpkin_Move
+  - shield_Idle
+  - sword_Move
+  - boom_Move
+  - gloves_Move
+  - hammer_Move
+  - gloves_Idle
+  - hammer_Idle
+  m_RenderDataMap: {}
+  m_Tag: Slot
+  m_IsVariant: 0

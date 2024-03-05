@@ -1,0 +1,14 @@
+자동정렬 alt + shift + f
+
+주석 ctrl + /        or        alt + shift + a
+
+복사 alt + shift + 방향키
+
+움직이기 alt + 방향키
+
+여러줄 커서  ctrl + alt + 방향키
+
+Ctrl + Shift + [ : 현재 영역 접시
+Ctrl + Shift + ] : 현재 영역 펼치기
+Ctrl + K + 0(숫자) : 전체 접기
+Ctrl + K + J : 전체 펼치기

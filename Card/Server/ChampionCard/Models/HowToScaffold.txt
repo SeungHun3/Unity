@@ -1,0 +1,8 @@
+﻿누겟 패키지 설치
+Microsoft.EntityFrameworkCore
+MySql.EntityFrameworkCore
+Microsoft.EntityFrameworkCore.Tools
+
+패키지 관리자 콘솔 명령어 ( 반드시 솔루션 빌드 성공 확인후 실행할것, 안그럼 실패뜸)
+Scaffold-DbContext "server=192.168.0.3;user=mongs;password=mongs12#$;" MySql.EntityFrameworkCore -OutputDir Models\Global -Schemas CC_Global -Force -Context GlobalContext
+Scaffold-DbContext "server=192.168.0.3;user=mongs;password=mongs12#$;" MySql.EntityFrameworkCore -OutputDir Models\Game -Schemas CC_Game -Force -Context GameContext

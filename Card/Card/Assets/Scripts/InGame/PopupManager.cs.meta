@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 0361a756388023a45ad7e52aba500075
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - Canvas: {instanceID: 0}
+  - Prefab_Hud: {fileID: 3158374286137403824, guid: 136f7e53da8008440846b3fad0152c8f, type: 3}
+  - Prefab_Versus: {fileID: 2198553806965946204, guid: e761baa919ea6a54fb074d0f0a7ca3ec, type: 3}
+  - Prefab_Turn: {fileID: 2517250590233232644, guid: b059973bf6857584e8be546e352cab8c, type: 3}
+  - Prefab_Spin: {fileID: 2792680309072447418, guid: 702f6285812a46f468a0eeae9b96ebe3, type: 3}
+  - Prefab_Rank_Reward: {fileID: 4937493436805003563, guid: 72766ea788ff74147b84318d07cf3347, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

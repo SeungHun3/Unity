@@ -1,0 +1,80 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Title
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings:
+    - serializedVersion: 3
+      m_BuildTarget: Android
+      m_MaxTextureSize: 2048
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: 50
+      m_TextureCompression: 1
+      m_CompressionQuality: 50
+      m_CrunchedCompression: 0
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 0
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 0
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 0
+      enableTightPacking: 0
+      enableAlphaDilation: 0
+    secondaryTextureSettings: {}
+    variantMultiplier: 1
+    packables:
+    - {fileID: 102900000, guid: 300e9a9b10350c6449597fefaf2d4f71, type: 3}
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: 36028680c7e9b6c449c961509d74a1f0, type: 3}
+  - {fileID: 21300000, guid: 26ac17c0a7f072a438f05591a84aca53, type: 3}
+  - {fileID: 21300000, guid: a51bfe012f48a4c40af82c7b5d6b082c, type: 3}
+  - {fileID: 21300000, guid: 541541f1bc7cc7c4988e43ffd6724717, type: 3}
+  - {fileID: 21300000, guid: 809786536e8b3de4bbcea0bf045793e5, type: 3}
+  - {fileID: 21300000, guid: c2f95cd55b2611d408e0905fbc8ccea4, type: 3}
+  - {fileID: 21300000, guid: 7bed5f97b723dbf43a4cf0ee97e9c4ce, type: 3}
+  - {fileID: 21300000, guid: ebc755085d36dff418be064722affb16, type: 3}
+  - {fileID: 21300000, guid: 82d4cc28ee1bea442808d83d2251a6cd, type: 3}
+  - {fileID: 21300000, guid: f7de053b332d1af4ba1f5cf2248503f5, type: 3}
+  - {fileID: 21300000, guid: f389a8eb9c9090346b4277d864af627f, type: 3}
+  - {fileID: 21300000, guid: eafad95d133a7f446b542003e256aa49, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - S
+  - TitleImg
+  - Slider_Bg
+  - Bi
+  - Pattern_Bg
+  - Layer 2
+  - Copyright
+  - Layer 1
+  - Slider_Fill
+  - Layer 4
+  - Slider_frame
+  - Layer 3
+  m_RenderDataMap: {}
+  m_Tag: Title
+  m_IsVariant: 0

@@ -1,0 +1,68 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Portrait
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings:
+    - serializedVersion: 3
+      m_BuildTarget: Android
+      m_MaxTextureSize: 2048
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: 50
+      m_TextureCompression: 1
+      m_CompressionQuality: 50
+      m_CrunchedCompression: 0
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 0
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 0
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 0
+      enableTightPacking: 0
+      enableAlphaDilation: 0
+    secondaryTextureSettings: {}
+    variantMultiplier: 1
+    packables:
+    - {fileID: 102900000, guid: a6bef805971281c488d55086c62c0a16, type: 3}
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: b546ec11376826948adade394b919cb0, type: 3}
+  - {fileID: 21300000, guid: 364785b93e6b24046a1cb47ba036051f, type: 3}
+  - {fileID: 21300000, guid: 32a5144b92e305b459f53bcfeae1dfcc, type: 3}
+  - {fileID: 21300000, guid: 83a13a2c8f8bc9b49990e4cfa5b29cdc, type: 3}
+  - {fileID: 21300000, guid: d8c95f6ca961ce64288dacd27a9ca53d, type: 3}
+  - {fileID: 21300000, guid: 957e085f87a32a44c99956c1fb916c1f, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - Portrait_character03
+  - Portrait_character02
+  - Portrait_character01
+  - Portrait_EnemyBg
+  - Portrait_Frame
+  - Portrait_UserBg
+  m_RenderDataMap: {}
+  m_Tag: Portrait
+  m_IsVariant: 0

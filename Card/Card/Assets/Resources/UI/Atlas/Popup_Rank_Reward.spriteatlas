@@ -1,0 +1,90 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Popup_Rank_Reward
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings:
+    - serializedVersion: 3
+      m_BuildTarget: Android
+      m_MaxTextureSize: 2048
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: 50
+      m_TextureCompression: 1
+      m_CompressionQuality: 50
+      m_CrunchedCompression: 0
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 0
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 0
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 0
+      enableTightPacking: 0
+      enableAlphaDilation: 0
+    secondaryTextureSettings: {}
+    variantMultiplier: 1
+    packables:
+    - {fileID: 102900000, guid: bd839536284961a418fdd80c989668d9, type: 3}
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: 0ff3bb52ac1adca4f9636676220d0d13, type: 3}
+  - {fileID: 21300000, guid: 1870a782df782cb46ad0941947c384d9, type: 3}
+  - {fileID: 21300000, guid: 69e757920456ed74daeb5ec3bbc9f353, type: 3}
+  - {fileID: 21300000, guid: 022292e2f8585bf418c7da07cc9fc000, type: 3}
+  - {fileID: 21300000, guid: 16138215383cc45419c58f74bb95af25, type: 3}
+  - {fileID: 21300000, guid: 992857456f60b4240a159d462c365cac, type: 3}
+  - {fileID: 21300000, guid: 4475e295714144d499076466f74b61c0, type: 3}
+  - {fileID: 21300000, guid: a4d2b7f60e129d6429e033dc8cf09175, type: 3}
+  - {fileID: 21300000, guid: 0a9c07790c1e46f40ab0580569a252c6, type: 3}
+  - {fileID: 21300000, guid: e5fada5a87a9ba947b53bae1b62baeb6, type: 3}
+  - {fileID: 21300000, guid: 6f902f1b25b89b4488d1242d5bf9e73f, type: 3}
+  - {fileID: 21300000, guid: 55b9acbbfe7e9454e976fdd0711709c0, type: 3}
+  - {fileID: 21300000, guid: caf3ad4cb02bffc40bb54c9eb78e9f66, type: 3}
+  - {fileID: 21300000, guid: 03c82adc2a6373f4dab94e4e4fa0fdfb, type: 3}
+  - {fileID: 21300000, guid: c41e985e69ea23246b94e4212ed67ace, type: 3}
+  - {fileID: 21300000, guid: b6ab33ef18f784e4cb24c21eb1980d58, type: 3}
+  - {fileID: 21300000, guid: d5a6bfef7bc92c4488b9f568f507d4b8, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - Btn_Yellow
+  - RoundBox
+  - Btn_Glay
+  - DEFEAT
+  - Slider_Bg
+  - Banner_Purple
+  - Slider_Fill
+  - Btn_Arrow_R
+  - Slider_Frame
+  - VICTORY
+  - Icon_Sword
+  - Banner_Blue
+  - Icon_Rank_L
+  - Banner_Yellow
+  - Icon_Rank_S
+  - Box
+  - Btn_Arrow_L
+  m_RenderDataMap: {}
+  m_Tag: Popup_Rank_Reward
+  m_IsVariant: 0

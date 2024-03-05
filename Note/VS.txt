@@ -1,0 +1,19 @@
+ctrl+shift+c	새 프롬프트 열기
+ctrl+shift+v	마크다운 미리보기 토글
+ctrl+kv	마크다운 측면에 미리보기
+ctrl+`	통합 터미널 토글
+
+2.코드 편집
+Ctrl + Space: IntelliSense(자동 완성) 활성화
+Ctrl + -: 이전 위치로 이동
+Ctrl + Shift + -: 다음 위치로 이동
+Ctrl + .: Quick Actions 및 Refactorings 표시
+Ctrl + K + C: 선택 영역 주석 처리
+Ctrl + K + U: 선택 영역 주석 처리 취소
+Ctrl + K + D: 코드 자동 정렬
+Ctrl + K + S: 소스 제어 창 열기
+Ctrl + K + F: 자동정렬
+Ctrl + Shift + / : /* 주석 처리(해제) */
+
+Ctrl + 방향키 :  텍스트 끝으로 이동
+Ctrl + Shift + 방향키 : 텍스트 끝까지 영역

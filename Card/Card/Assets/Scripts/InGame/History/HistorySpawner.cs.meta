@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+guid: b8054a7ef83585049a2fa955f97dd309
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - HistorySlot: {fileID: 1620348435277313316, guid: 16ce185a210f3d549983b8288593223e, type: 3}
+  - Content: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
