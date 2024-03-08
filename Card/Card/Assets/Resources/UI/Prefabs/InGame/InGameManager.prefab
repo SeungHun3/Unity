@@ -48,6 +48,14 @@ MonoBehaviour:
   Monster_Obj: {fileID: 0}
   Mon_HitTextSpawner: {fileID: 0}
   Mon_HitFxSpawner: {fileID: 0}
+  Player_Attack: 0
+  Player_HP: 0
+  Player_Defence: 0
+  Monster_Attack: 0
+  Monster_HP: 0
+  Monster_Defence: 0
+  MonsterPlayDelay: 0
+  TurnDelay: 0.296
 --- !u!114 &4748156725328452637
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -67,6 +75,6 @@ MonoBehaviour:
   Prefab_Result: {fileID: 4937493436805003563, guid: 72766ea788ff74147b84318d07cf3347, type: 3}
   Prefab_Miss: {fileID: 2340347832770760871, guid: f77830634cca0ed4394fb622f337f597, type: 3}
   Inst_InGameHUD: {fileID: 0}
-  Inst_Versus: {fileID: 0}
   Inst_Turn: {fileID: 0}
   Inst_Miss: {fileID: 0}
+  Inst_Result: {fileID: 0}

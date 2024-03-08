@@ -7,7 +7,7 @@ using UnityEngine.UI;
 
 
 
-public class Slot : MonoBehaviour
+public class Symbol : MonoBehaviour
 {
     Vector3 _initPos;
     string _curName;
@@ -36,21 +36,21 @@ public class Slot : MonoBehaviour
 
     public void SetTexture(ulong serialNum) // DataTable내에 존재하는 Serial Number의 값
     {
-        _curName = AtlasManager.Instance.SlotsInfo[serialNum].Name;
+        _curName = AtlasManager.Instance.SymbolsInfo[serialNum].Name;
         string curstate = string.Empty;
         switch (_curState)
         {
             case EState.Idle:
-                curstate = AtlasManager.Instance.SlotsInfo[serialNum].Idle;
+                curstate = AtlasManager.Instance.SymbolsInfo[serialNum].Idle;
                 break;
             case EState.Spinning:
-                curstate = AtlasManager.Instance.SlotsInfo[serialNum].Move;
+                curstate = AtlasManager.Instance.SymbolsInfo[serialNum].Move;
                 break;
             case EState.Win:
-                curstate = AtlasManager.Instance.SlotsInfo[serialNum].Idle;
+                curstate = AtlasManager.Instance.SymbolsInfo[serialNum].Idle;
                 break;
         }
-        GetComponent<Image>().sprite = AtlasManager.Instance.GetSlotSprite(_curName + curstate);
+        GetComponent<Image>().sprite = AtlasManager.Instance.GetSymbolsprite(_curName + curstate);
         debug = _curName + curstate;
         serial_debug = (int)serialNum;
     }
@@ -72,7 +72,7 @@ public class Slot : MonoBehaviour
     }
 
 
-    public void SlotStart(int spinCount)
+    public void SymbolStart(int spinCount)
     {
         SpinCount = spinCount;
     }
@@ -108,7 +108,4 @@ public class Slot : MonoBehaviour
         SetTexture((ulong)Random.Range((ulong)ESlotCard.None + 1, (ulong)ESlotCard.End));
     }
 
-    private void Awake()
-    {
-    }
 }

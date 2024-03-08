@@ -969,6 +969,10 @@ PrefabInstance:
       value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 7876496662637115317, guid: bd20aba47b8cb954491100e7353a1fdc, type: 3}
+      propertyPath: TurnDelay
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7876496662637115317, guid: bd20aba47b8cb954491100e7353a1fdc, type: 3}
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
@@ -1000,6 +1004,10 @@ PrefabInstance:
       propertyPath: Mon_HitFxSpawner
       value: 
       objectReference: {fileID: 1679163536}
+    - target: {fileID: 7876496662637115317, guid: bd20aba47b8cb954491100e7353a1fdc, type: 3}
+      propertyPath: MonsterPlayDelay
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7876496662637115317, guid: bd20aba47b8cb954491100e7353a1fdc, type: 3}
       propertyPath: Monster_FxSpawner
       value: 

@@ -12,7 +12,7 @@ public class SlotCard : CardBase
 	public TextMeshProUGUI Title_Text;
 	public TextMeshProUGUI Content_Text;
 
-
+	bool b_animEnd;
 
 	private void OnEnable()
 	{
@@ -20,30 +20,35 @@ public class SlotCard : CardBase
 
 	}
 
-	public IEnumerator Open(Transform spawn, Transform arrived1, Transform arrived2)
+	public IEnumerator Open(Transform spawn, 
+		Transform arrived1, float v_arrived_1, float d_arrived_1,
+		Transform arrived2, float v_arrived_2, float d_arrived_2, 
+		float v_scale, float d_scale)
 	{
 		TurnController.Instance.Target.OwnCards.Add(this);
 		transform.position = spawn.position;
-
 		transform.DOScale(0.5f, 0.2f);
-		transform.DOMoveY(arrived1.position.y, 0.5f);
-		yield return new WaitForSecondsRealtime(0.5f);
 
-		transform.DOMoveY(arrived2.position.y, 0.2f);
-		yield return new WaitForSecondsRealtime(0.4f);
+		transform.DOMoveY(arrived1.position.y, v_arrived_1); // 0.5
+		yield return new WaitForSecondsRealtime(d_arrived_1); // 0.5
 
-		transform.DOScale(1f, 0.5f);
-		transform.DOMoveY(transform.position.y, 0.5f);
-		yield return new WaitForSecondsRealtime(0.5f);
+		transform.DOMoveY(arrived2.position.y, v_arrived_2); // 0.2
+		yield return new WaitForSecondsRealtime(d_arrived_2); // 0.4
 
-		//yield return Use();
+		transform.DOScale(1f, v_scale); // 0.5
+		yield return new WaitForSecondsRealtime(d_scale); // 0.5
+
 
 	}
 	public override IEnumerator Use()
 	{
 		transform.SetParent(PopupManager.Instance.Canvas.transform);
+		b_animEnd = false;
 		GetComponent<Animation>().Play("CardUse");
-		yield return new WaitForSecondsRealtime(1f);
+		while(!b_animEnd)
+		{
+			yield return null;
+		}
 		TurnController.Instance.Target.OwnCards.Remove(this);
 		gameObject.SetActive(false);
 	}
@@ -56,11 +61,13 @@ public class SlotCard : CardBase
 
 		AtlasManager AtlasMgr = AtlasManager.Instance;
 		Dictionary<ulong, CardInfo> cardInfo = InGameTable.Instance.CardInfo;
-
-		MainImage.sprite = AtlasMgr.GetSlotSkillSprite(cardInfo[(ulong)eSlotCard].IconName);
+		MainImage.sprite = AtlasMgr.GetSymbolSkillSprite(cardInfo[(ulong)eSlotCard].IconName);
 		Title_Text.text = cardInfo[(ulong)eSlotCard].SkillName;
 		Content_Text.text = cardInfo[(ulong)eSlotCard].Content;
 	}
-
+	public void AnimEnd()
+	{
+		b_animEnd = true;
+	}
 
 }

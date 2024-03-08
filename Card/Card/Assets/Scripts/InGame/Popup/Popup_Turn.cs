@@ -12,7 +12,7 @@ public class Popup_Turn : PopupBase
         _animName = "Popup_Turn";
         ShowTarget(TurnController.Instance.IsPlayerTurn);
         yield return base.Open();
-        gameObject.SetActive(false);
+        //gameObject.SetActive(false);
     }
 
     public void ShowTarget(bool isPlayer)

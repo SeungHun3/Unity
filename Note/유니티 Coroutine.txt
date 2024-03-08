@@ -1,0 +1,35 @@
+using System.Collections;
+using UnityEngine;
+
+public class CoroutineWithForeach : MonoBehaviour
+{
+    void Start()
+    {
+        StartCoroutine(NumberCoroutine());
+    }
+
+    IEnumerator NumberCoroutine()
+    {
+        for (int i = 1; i <= 5; i++)
+        {
+            yield return i;
+        }
+    }
+
+    void Update()
+    {
+        foreach (int number in NumberCoroutine())
+        {
+            Debug.Log("Number: " + number);
+        }
+    }
+}
+
+Coroutine 종료 = yield break;
+한 프레임 대기  = yield return null; 
+StopCoroutine = break가 아닌 다음 yield에 걸릴때까지 루틴끝내고 종료
+======================================================
+Invoke()
+
+void myDelay() {}
+Invoke("myDelay", 2.f); // myDelay 함수를 2초뒤에 실행

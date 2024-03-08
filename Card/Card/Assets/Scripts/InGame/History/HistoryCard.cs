@@ -14,7 +14,7 @@ public class HistoryCard : CardBase
         AtlasManager AtlasMgr = AtlasManager.Instance;
         Dictionary<ulong, CardInfo> cardInfo = InGameTable.Instance.CardInfo;
         
-        MainImage.sprite = AtlasMgr.GetSlotSkillSprite(cardInfo[(ulong)eSlotCard].IconName);
+        MainImage.sprite = AtlasMgr.GetSymbolSkillSprite(cardInfo[(ulong)eSlotCard].IconName);
         string bgname = "History_Bg_";
         bgname += isPlayer ? "User" : "Enemy";
         BackGround.sprite = AtlasMgr.GetHudSprite(bgname);

@@ -6,7 +6,7 @@ SpriteAtlas:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: SlotSkill
+  m_Name: SymbolSkill
   m_EditorData:
     serializedVersion: 2
     textureSettings:
@@ -70,5 +70,5 @@ SpriteAtlas:
   - SlotSkillImg_Sample
   - gloves
   m_RenderDataMap: {}
-  m_Tag: SlotSkill
+  m_Tag: SymbolSkill
   m_IsVariant: 0

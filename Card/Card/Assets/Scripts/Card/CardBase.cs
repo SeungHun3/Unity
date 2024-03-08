@@ -6,8 +6,9 @@ using EnumTypes.InGame;
 public class CardBase : MonoBehaviour
 {
 	public ESlotCard ESlotCard;
-	public virtual IEnumerator Use()
-	{
-		yield break;
-	}
+
+    public virtual IEnumerator Use()
+    {
+        yield break;
+    }
 }

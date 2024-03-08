@@ -24,24 +24,24 @@ public struct SlotInfo
 //Assets/Resources/UI/InGame/Popup_Versus_Result/Coin_Bg.png
 public class AtlasManager : SingleDontDestroy<AtlasManager>
 {
-    ResourceRequest _reqSlot, _reqSlotSkill, _reqHud;
+    ResourceRequest _reqSlot, _reqSymbolSkill, _reqHud;
     SpriteAtlas _slotAtlas;
-    SpriteAtlas _slotSkillAtlas;
+    SpriteAtlas _SymbolSkillAtlas;
     SpriteAtlas _hudAtlas;
-    public Dictionary<ulong, SlotInfo> SlotsInfo = new Dictionary<ulong, SlotInfo>();
-    public Dictionary<ulong, string> SlotSkill = new Dictionary<ulong, string>();
+    public Dictionary<ulong, SlotInfo> SymbolsInfo = new Dictionary<ulong, SlotInfo>();
+    public Dictionary<ulong, string> Symbolskill = new Dictionary<ulong, string>();
 
     public ResourceRequest RequestSlot => _reqSlot;
-    public ResourceRequest RequestSlotSkill => _reqSlotSkill;
+    public ResourceRequest RequestSymbolSkill => _reqSymbolSkill;
     public ResourceRequest RequestHud => _reqHud;
 
-    public Sprite GetSlotSprite(string name)
+    public Sprite GetSymbolsprite(string name)
     {
         return _slotAtlas.GetSprite(name);
     }
-    public Sprite GetSlotSkillSprite(string name)
+    public Sprite GetSymbolSkillSprite(string name)
     {
-        return _slotSkillAtlas.GetSprite(name);
+        return _SymbolSkillAtlas.GetSprite(name);
     }
     public Sprite GetHudSprite(string name)
     {
@@ -57,8 +57,8 @@ public class AtlasManager : SingleDontDestroy<AtlasManager>
             yield return null;
         }
 
-        _reqSlotSkill = Resources.LoadAsync<SpriteAtlas>("UI/Atlas/SlotSkill");
-        while (RequestSlotSkill.progress < 1)
+        _reqSymbolSkill = Resources.LoadAsync<SpriteAtlas>("UI/Atlas/SymbolSkill");
+        while (RequestSymbolSkill.progress < 1)
         {
             yield return null;
         }
@@ -72,7 +72,7 @@ public class AtlasManager : SingleDontDestroy<AtlasManager>
     public void LoadFinished()
     {
         _slotAtlas = SetAtlas(_reqSlot);
-        _slotSkillAtlas = SetAtlas(_reqSlotSkill);
+        _SymbolSkillAtlas = SetAtlas(_reqSymbolSkill);
         _hudAtlas = SetAtlas(_reqHud);
     }
 

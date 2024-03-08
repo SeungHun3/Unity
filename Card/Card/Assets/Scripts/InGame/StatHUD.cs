@@ -20,15 +20,16 @@ public class StatHUD : MonoBehaviour
     {
         _target = target;
         _target.HPDelegate += UpdateHP;
-        MaxHP.text = _target.MaxHP.ToString();
-        CurHP.text = _target.CurHP.ToString() + "/";
+        
+        MaxHP.text = ((int)_target.MaxHP).ToString();
+        CurHP.text = ((int)_target.CurHP).ToString() + "/";
         Hp.value = 1f;
         Attack.text = _target.Attack.ToString();
         Defence.text = _target.Defence.ToString();
     }
     void UpdateHP()
     {
-        CurHP.text = _target.CurHP.ToString() + "/";
+        CurHP.text = ((int)_target.CurHP).ToString() + "/";
         StartCoroutine(SetHP(Hp, _target.NormalizedHP));
     }
 

@@ -93,3 +93,46 @@ public abstract class Spawner<T> : MonoBehaviour where T : Component
     }
 
 }
+
+public abstract class AnimContoller : MonoBehaviour
+{
+    public AnimTarget AnimTarget;
+    private bool _bIsAnimEnd;
+    protected string _animName;
+    public virtual IEnumerator Use()
+    {
+        yield break;
+    }
+    public virtual IEnumerator Open()
+    {
+        gameObject.SetActive(true);
+        yield return StartAnim();
+    }
+
+    IEnumerator StartAnim()
+    {
+        AnimTarget.StartAnim(this, _animName);
+        while (!_bIsAnimEnd)
+        {
+            yield return null;
+        }
+        _bIsAnimEnd = false;
+    }
+    public virtual void EndAnim()
+    {
+        _bIsAnimEnd = true;
+    }
+}
+public abstract class AnimTarget : MonoBehaviour
+{
+    AnimContoller _target;
+    public virtual void StartAnim(AnimContoller target, string animName)
+    {
+        _target = target;
+        GetComponent<Animation>().Play(animName);
+    }
+    public virtual void EndAnim()
+    {
+        _target.EndAnim();
+    }
+}

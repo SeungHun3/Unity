@@ -1,12 +1,12 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿//using Microsoft.AspNetCore.Mvc;
 
-namespace ChampionCard.Controllers
-{
-    public class ShopController : Controller
-    {
-        public IActionResult Index()
-        {
-            return View();
-        }
-    }
-}
+//namespace ChampionCard.Controllers
+//{
+//    public class ShopController : Controller
+//    {
+//        public IActionResult Index()
+//        {
+//            return View();
+//        }
+//    }
+//}

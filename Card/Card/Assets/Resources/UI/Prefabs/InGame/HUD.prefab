@@ -454,6 +454,12 @@ MonoBehaviour:
   SpawnPos: {fileID: 5705974038915806887}
   Arrived_1: {fileID: 1023294655009970001}
   Arrived_2: {fileID: 3103455863967688522}
+  V_Arrived_1: 0.25
+  V_Arrived_2: 0.18
+  V_Scale: 0.4
+  D_Arrived_1: 0.28
+  D_Arrived_2: 0.24
+  D_Scale: 0.7
 --- !u!114 &8112199431174164102
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1919,6 +1925,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4616591155363519497, guid: b97a2acb2d6f60d4f9206ac6ec8f1f9a, type: 3}
       propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4616591156528642339, guid: b97a2acb2d6f60d4f9206ac6ec8f1f9a, type: 3}
+      propertyPath: m_PlayAutomatically
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4616591156556742647, guid: b97a2acb2d6f60d4f9206ac6ec8f1f9a, type: 3}

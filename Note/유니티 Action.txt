@@ -1,0 +1,7 @@
+Action<string> myDelegate = delegate (string text_) {
+    // 이 부분에 원하는 동작을 작성
+    Console.WriteLine(text_);
+};
+
+// 나중에 대리자 호출
+myDelegate("Hello, World!");

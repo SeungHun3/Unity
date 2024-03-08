@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Mongs;
+using Mongs.API;
 
 public class InGameManager : SingleDestroy<InGameManager>
 {
@@ -16,14 +18,22 @@ public class InGameManager : SingleDestroy<InGameManager>
     public int Monster_Attack;
     public int Monster_HP;
     public int Monster_Defence;
-
+    [Header("----------Delay----------")]
+    [Range(0.0f, 2.0f)]
+    public float MonsterPlayDelay;
+    [Range(0.0f, 2.0f)]
+    public float TurnDelay;
     protected override void Awake()
     {
         base.Awake();
+        LoginProc loginProc = MongsWebNetManager.Instance.GetApi(MongsWebNetManager.API_TYPE.LoginProc) as LoginProc;
+        loginProc.RequestData.PlatformID = "Test_PlatformID";
+        loginProc.RequestData.PlatformType = Common.Enum.PlatformType.Guest;
 
+        loginProc.Request();
     }
 
-    protected IEnumerator Load() // 컨트롤러에서 로드 시킬 예정
+    protected IEnumerator Load() // 씬 컨트롤러에서 로드 시킬 예정
     {
         yield return AtlasManager.Instance.LoadAtlas();
     }
@@ -55,7 +65,7 @@ public class InGameManager : SingleDestroy<InGameManager>
 
         Init();
         LoadFinished();
-        //yield return PopupManager.Instance.OpenVersus();
+        yield return PopupManager.Instance.OpenVersus();
 
 
 

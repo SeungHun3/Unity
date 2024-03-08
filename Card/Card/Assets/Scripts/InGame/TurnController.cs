@@ -25,7 +25,7 @@ public abstract class CharBase : IPlayMachine, ISkill
     public CharBase Target = null;
     public ESlotCard ESlotCard;
     public List<CardBase> OwnCards = new();
-    public SlotSkillSystem OwnSlotSkills;
+    public SymbolskillSystem OwnSymbolskills;
 
     #region Stat
         
@@ -82,19 +82,22 @@ public abstract class CharBase : IPlayMachine, ISkill
 
     protected ESlotCard GetCard(int cardIndex)
     {
-        return OwnCards[cardIndex].ESlotCard;
+        if(OwnCards[cardIndex])
+        {
+            return OwnCards[cardIndex].ESlotCard;
+        }
+        return ESlotCard.None;
     }
 
     public virtual IEnumerator UseCard(int cardIndex)
-    {
-        ESlotCard card = GetCard(cardIndex);
-        OwnSlotSkills.AddSkill(card);
-        PopupManager.Instance.Inst_InGameHUD.HistorySpawner.AddCard(card);
-        yield return OwnCards[cardIndex].Use();
-    }
+	{
+		ESlotCard card = GetCard(cardIndex);
+		PopupManager.Instance.Inst_InGameHUD.HistorySpawner.AddCard(card);
+		yield return OwnCards[cardIndex].Use();
+	}
 
 
-    public virtual int ApplyDamage(int damage)
+	public virtual int ApplyDamage(int damage)
     {
         damage -= Defence;
         CurHP = _curHP - damage;
@@ -114,7 +117,6 @@ public abstract class CharBase : IPlayMachine, ISkill
         ESlotCard = ESlotCard.None;
     }
 
-
 }
 
 public class Player : CharBase
@@ -131,13 +133,15 @@ public class Player : CharBase
 
     public override IEnumerator UseCard(int cardIndex)
     {
-        ESlotCard Card = GetCard(cardIndex);
-        yield return base.UseCard(cardIndex);
-        yield return OwnSlotSkills.Skills[0].Use();
+        ESlotCard card = GetCard(cardIndex);
+		yield return base.UseCard(cardIndex);
+
+        OwnSymbolskills.AddSkill(card);
+		yield return OwnSymbolskills.Skills[0].Use();
         InGameManager.Instance.Mon_HitFxSpawner.SpawnFX();
     }
 
-    public override int ApplyDamage(int damage)
+	public override int ApplyDamage(int damage)
     {
         int Damage = base.ApplyDamage(damage);
 
@@ -151,7 +155,7 @@ public class Player : CharBase
     public Player(float hp, int attack, int defence) : base(hp, attack, defence)
     {
         Coin = 0;
-        OwnSlotSkills = new SlotSkillSystem(this);
+        OwnSymbolskills = new SymbolskillSystem(this);
 
         Debug.Log("Player : HP= " + MaxHP + ", Attack= " + Attack + ", Defence= " + defence + ", Coin= " + Coin);
     }
@@ -170,15 +174,18 @@ public class Monster : CharBase
         Debug.Log("<color=#FF5326>Monster</color>");
     }
 
-    public override IEnumerator UseCard(int cardIndex)
-    {
-        yield return base.UseCard(cardIndex);
+	public override IEnumerator UseCard(int cardIndex)
+	{
+		ESlotCard card = GetCard(cardIndex);
+		yield return base.UseCard(cardIndex);
 
-        TriggerMotion(EMotion.Attack);
-        yield return OwnSlotSkills.Skills[0].Use();
+		OwnSymbolskills.AddSkill(card);
+
+		TriggerMotion(EMotion.Attack);
+		yield return OwnSymbolskills.Skills[0].Use();
     }
 
-    public override int ApplyDamage(int damage)
+	public override int ApplyDamage(int damage)
     {
 
         // motion
@@ -219,7 +226,7 @@ public class Monster : CharBase
     public Monster(int hp, int attack, int defence) : base(hp, attack, defence)
     {
         Obj = InGameManager.Instance.Monster_Obj;
-        OwnSlotSkills = new SlotSkillSystem(this);
+        OwnSymbolskills = new SymbolskillSystem(this);
 
         Debug.Log("Monster : HP= " + MaxHP + ", Attack= " + Attack + ", Defence= " + defence);
     }
@@ -235,17 +242,16 @@ public class TurnController : SingleDestroy<TurnController>
     public CharBase Target => _target;
     public Player Player => _player;
     public Monster Monster => _monster;
-
     public bool IsPlayerTurn { get { return _target == _player; } }
 
     public void Init()
-    {   
+    {
         InGameManager inGameManager = InGameManager.Instance;
         _player = new Player(inGameManager.Player_HP, inGameManager.Player_Attack, inGameManager.Player_Defence);
         _monster = new Monster(inGameManager.Monster_HP, inGameManager.Monster_Attack, inGameManager.Monster_Defence);
         _player.Target = _monster;
         _monster.Target = _player;
-        int checkTurn = Random.Range(0, 1); // 0 ~ 1
+        int checkTurn = Random.Range(0, 2); // 0 ~ 1
         bool isPlayer = checkTurn == 0;
         _target = isPlayer ? Player : Monster;
     }
@@ -259,20 +265,20 @@ public class TurnController : SingleDestroy<TurnController>
         yield return PopupManager.Instance.Inst_Turn.Open();
         if (!IsPlayerTurn)
         {
-            yield return new WaitForSecondsRealtime(2f);
+            yield return new WaitForSecondsRealtime(InGameManager.Instance.MonsterPlayDelay);
         }
         _target.Play();
     }
 
     public IEnumerator StartTurn()
     {
-        yield return new WaitForSecondsRealtime(2f);
+        yield return new WaitForSecondsRealtime(InGameManager.Instance.TurnDelay);
         SlotMachine.Instance.TurnChange();
         SlotMachine.Instance.ShutterAnim();
         yield return PopupManager.Instance.Inst_Turn.Open();
         if (!IsPlayerTurn)
         {
-            yield return new WaitForSecondsRealtime(2f);
+            yield return new WaitForSecondsRealtime(InGameManager.Instance.MonsterPlayDelay);
         }
 
         _target.Play();
@@ -285,7 +291,10 @@ public class TurnController : SingleDestroy<TurnController>
     public IEnumerator EndTurn()
     {
         yield return _target.OpenCard();
-        yield return _target.UseCard(0);
+        if(_target.OwnCards.Count != 0)
+		{
+            yield return _target.UseCard(0);
+        }
 
         _target = IsPlayerTurn ? Monster : Player;
         if (_target.CurHP <= 0)

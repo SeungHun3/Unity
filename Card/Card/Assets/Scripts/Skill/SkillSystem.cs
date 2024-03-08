@@ -22,14 +22,15 @@ public class DeckSkillSystem : SkillSystem
     : base(owner) { }
 }
 
-public class SlotSkillSystem : SkillSystem
+public class SymbolskillSystem : SkillSystem
 {
-    public List<SlotSkill> Skills = new();
+    public List<Symbolskill> Skills = new();
     public void AddSkill(ESlotCard card)
 	{
 		switch (card)
 		{
 			case ESlotCard.None:
+				Skills.Add(new Symbolskill(Owner));
 				break;
 			case ESlotCard.Sword:
 				Skills.Add(new Sword(Owner));
@@ -56,7 +57,6 @@ public class SlotSkillSystem : SkillSystem
 				break;
 		}
     }
-    public virtual IEnumerator Use(ESlotCard eSlotCard) { yield break; }
-    public SlotSkillSystem(CharBase owner)
+    public SymbolskillSystem(CharBase owner)
     : base(owner) { }
 }

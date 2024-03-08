@@ -1042,8 +1042,8 @@ MonoBehaviour:
   Shutter: {fileID: 8506968330329357995}
   TurnArrow: {fileID: 4616591155168802549}
   ReelsDelay: 0.19
-  Speed: 228
-  SpinningNum: 10
+  Speed: 300
+  SpinningNum: 5
   Property: 0
 --- !u!225 &7765790840198091993
 CanvasGroup:
@@ -1180,11 +1180,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _name: 
-  Slot: {fileID: 3240988144578477143, guid: a5cfdc63e2d443743838219c387e2ce5, type: 3}
+  Prefab_Symbol: {fileID: 3240988144578477143, guid: a5cfdc63e2d443743838219c387e2ce5, type: 3}
   Property: 0
   SlotCount: 0
   OriginPosY: []
-  Slots: []
+  Symbols: []
   IsSpinning: 0
   StopDelay: 0
   SpinCount: 0
@@ -1828,6 +1828,22 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+  - eventID: 3
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 4616591156528642340}
+          m_TargetAssemblyTypeName: Handle, Assembly-CSharp
+          m_MethodName: Return
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!95 &2030306317469650142
 Animator:
   serializedVersion: 4
@@ -2385,6 +2401,7 @@ MonoBehaviour:
   Head: {fileID: 4616591155719798394}
   Neck: {fileID: 4616591154936338514}
   HeadArrived: {fileID: 3446737643128792085}
+  ResetSpeed: 0.733
   bInput: 0
 --- !u!111 &4616591156528642339
 Animation:
@@ -2399,8 +2416,9 @@ Animation:
   m_Animations:
   - {fileID: 7400000, guid: 3d865fa8bdedc6c4da47b805419e21ce, type: 2}
   - {fileID: 7400000, guid: 464a537fa819b254b964d4d1a3fc79f9, type: 2}
+  - {fileID: 7400000, guid: b0fbf3f875002924cb4a63003f540772, type: 2}
   m_WrapMode: 0
-  m_PlayAutomatically: 1
+  m_PlayAutomatically: 0
   m_AnimatePhysics: 0
   m_CullingType: 0
 --- !u!1 &4616591156556742632
@@ -2453,11 +2471,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _name: 
-  Slot: {fileID: 3240988144578477143, guid: a5cfdc63e2d443743838219c387e2ce5, type: 3}
+  Prefab_Symbol: {fileID: 3240988144578477143, guid: a5cfdc63e2d443743838219c387e2ce5, type: 3}
   Property: 0
   SlotCount: 0
   OriginPosY: []
-  Slots: []
+  Symbols: []
   IsSpinning: 0
   StopDelay: 0
   SpinCount: 0
@@ -2701,11 +2719,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _name: 
-  Slot: {fileID: 3240988144578477143, guid: a5cfdc63e2d443743838219c387e2ce5, type: 3}
+  Prefab_Symbol: {fileID: 3240988144578477143, guid: a5cfdc63e2d443743838219c387e2ce5, type: 3}
   Property: 0
   SlotCount: 0
   OriginPosY: []
-  Slots: []
+  Symbols: []
   IsSpinning: 0
   StopDelay: 0
   SpinCount: 0

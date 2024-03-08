@@ -29,8 +29,8 @@ public class InGameTable : SingleDestroy<InGameTable>
             // AtlasManager
             {
                 SlotInfo slotInfo = new SlotInfo(row.IconName);
-                AtlasManager.Instance.SlotsInfo[key] = slotInfo;
-                AtlasManager.Instance.SlotSkill[key] = row.IconName;
+                AtlasManager.Instance.SymbolsInfo[key] = slotInfo;
+                AtlasManager.Instance.Symbolskill[key] = row.IconName;
             }
             // DrawManager
             {
